@@ -11,6 +11,10 @@ app.use(cors())
 dbConnection()
 app.use(routes);
 
+app.get('/', (req, res) => {
+    res.send("Ecommerce Secend Backend on Render");
+})
+
 app.listen(8000, ()=>{
     console.log("port running on 8000")
 })
