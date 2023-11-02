@@ -24,7 +24,6 @@ const registrationController = async (req, res) => {
     else{
 
         let duplicateEmail = await User.find({email: email})
-        
         if(duplicateEmail.length > 0){
             return res.send({error: "Email already exist!"})
         }
